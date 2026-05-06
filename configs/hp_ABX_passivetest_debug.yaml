@@ -1,0 +1,385 @@
+# test config AB test, waveform, 3 conditions, no looping
+
+
+testname: ABX headphone test with autophonic source
+testId: hp_ABX_passivetest
+bufferSize: 2048
+stopOnErrors: true
+showButtonPreviousPage: true
+remoteService: service/write.php
+
+
+pages:
+    - type: generic
+      id: consent
+      name: Consent to Participate
+      content: |
+        <h3>Consent to Participate</h3>
+
+        <p>
+          You are invited to participate in an anonymous online listening experiment.
+          The purpose of this study is to investigate whether listeners can hear
+          differences between headphone renderings with different driver angles.
+        </p>
+
+        <p>
+          The experiment consists of an ABX listening test followed by a short
+          written description section. In each ABX trial, you will hear three sounds:
+          A, B, and X. X is identical to either A or B. Your task is to decide
+          whether X matches A or B.
+        </p>
+
+        <p>
+          The study should take approximately 30–40 minutes. Please complete it in
+          one sitting, in a quiet environment, using headphones.
+        </p>
+
+        <p>
+          Your responses are anonymous. Please do not enter your name, email address,
+          or any other identifying information anywhere in the experiment.
+        </p>
+
+        <p>
+          Participation is voluntary. You may stop at any time by closing the browser
+          window. By continuing, you confirm that you are at least 18 years old and
+          that you agree to participate in this anonymous listening experiment.
+        </p>
+
+      questionnaire:
+        - type: likert
+          name: consent_agreement
+          label: "Do you agree to participate in this anonymous listening experiment?"
+          response:
+            - value: "yes"
+              label: "Yes, I agree to participate"
+
+
+    - type: generic
+      id: instructions
+      name: Instructions
+      content: |
+        <h3>Instructions</h3>
+
+        <p>
+          This experiment tests whether you can hear differences between headphone
+          renderings with different driver angles.
+        </p>
+
+        <h4>ABX task</h4>
+
+        <p>
+          On each trial, you will hear three sounds:
+        </p>
+
+        <ul>
+          <li><strong>A</strong>: one headphone rendering</li>
+          <li><strong>B</strong>: another headphone rendering</li>
+          <li><strong>X</strong>: identical to either A or B</li>
+        </ul>
+
+        <p>
+          Your task is to decide whether <strong>X is the same as A</strong> or
+          <strong>X is the same as B</strong>.
+        </p>
+
+        <p>
+          You may listen carefully and compare the sounds before answering. Focus on
+          differences such as tone color, brightness, muffling, distance, spaciousness,
+          clarity, localization, or any other audible cue.
+        </p>
+
+        <h4>Listening requirements</h4>
+
+        <ul>
+          <li>Use headphones.</li>
+          <li>Complete the test in a quiet environment.</li>
+          <li>Set your volume to a comfortable level and do not change it during the test.</li>
+          <li>Do not use laptop speakers, phone speakers, or external loudspeakers.</li>
+        </ul>
+
+        <h4>Important</h4>
+
+        <p>
+          Some differences may be subtle. If you are unsure, make your best judgment.
+          There is always a correct answer, so please choose either A or B on every
+          ABX trial.
+        </p>
+
+        <p>
+          The final section will ask you to describe, in your own words, the
+          difference between several headphone renderings.
+        </p>
+
+    - type: volume
+      id: volume
+      name: Volume setting
+      content: |
+        <p>Adjust the slider and your personal volume control. Once it is set, do not change the volume for the rest of the experiment.</p>
+      stimulus: configs/resources/audio/hp_audio/male/akg_0.wav
+
+
+
+    # Training trials
+
+    - type: paired_comparison
+      id: training_akg_0_vs_60
+      name: Training 1
+      content: |
+        <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+      enableLooping: true       
+      reference: configs/resources/audio/hp_audio/male/akg_0.wav
+      stimuli:
+        akg_60_m: configs/resources/audio/hp_audio/male/akg_60.wav
+
+    - type: paired_comparison
+      id: training_akg_0_vs_60
+      name: Training 2
+      content: |
+        <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+      enableLooping: true        
+      reference: configs/resources/audio/hp_audio/female/akg_60.wav
+      stimuli:
+        akg_0_f: configs/resources/audio/hp_audio/female/akg_0.wav
+
+
+
+  # ---------- AKG angle comparisons ----------
+    - 
+      - random
+      - type: paired_comparison
+        id: test_akg_0_vs_12_male
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        enableLooping: true 
+        reference: configs/resources/audio/hp_audio/male/akg_0.wav
+        stimuli:
+          akg_12_m: configs/resources/audio/hp_audio/male/akg_12.wav
+
+
+    - type: finish
+      name: Final Listening Description Questions
+      content: |
+        <h3>Final Listening Description Section</h3>
+
+        <p>
+          In this section, listen to each A/B pair and describe the audible
+          difference between A and B in your own words.
+        </p>
+
+
+        <script>
+          function getParticipantID() {
+            var existingID = localStorage.getItem("hp_abx_participant_id");
+
+            if (existingID) {
+              return existingID;
+            }
+
+            var timePart = Date.now().toString(36);
+            var randomPart = Math.random().toString(36).substring(2, 10);
+            var newID = "p_" + timePart + "_" + randomPart;
+
+            localStorage.setItem("hp_abx_participant_id", newID);
+            return newID;
+          }
+
+          function fillParticipantID() {
+            var participantID = getParticipantID();
+
+            var inputs = document.querySelectorAll("input, textarea");
+
+            for (var i = 0; i < inputs.length; i++) {
+              if (
+                inputs[i].name === "participant_id" ||
+                inputs[i].id === "participant_id"
+              ) {
+                inputs[i].value = participantID;
+                inputs[i].readOnly = true;
+              }
+            }
+          }
+
+          setTimeout(fillParticipantID, 500);
+          setTimeout(fillParticipantID, 1000);
+          setTimeout(fillParticipantID, 2000);
+        </script>
+
+        <p>
+          You may mention brightness, muffling, distance, spaciousness, bass,
+          clarity, localization, tone color, or any other difference you notice.
+        </p>
+
+        <hr>
+
+        <h4>Pair 1</h4>
+
+        <p><strong>A</strong></p>
+        <audio controls>
+          <source src="configs/resources/audio/hp_audio/male/no_headphones.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+
+        <p><strong>B</strong></p>
+        <audio controls>
+          <source src="configs/resources/audio/hp_audio/male/akg_60.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+
+        <hr>
+
+        <h4>Pair 2</h4>
+
+        <p><strong>A</strong></p>
+        <audio controls>
+          <source src="configs/resources/audio/hp_audio/male/no_headphones.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+
+        <p><strong>B°</strong></p>
+        <audio controls>
+          <source src="configs/resources/audio/hp_audio/male/diy_45.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+
+        <hr>
+
+        <h4>Pair 3</h4>
+
+        <p><strong>A</strong></p>
+        <audio controls>
+          <source src="configs/resources/audio/hp_audio/male/no_headphones.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+
+        <p><strong>B</strong></p>
+        <audio controls>
+          <source src="configs/resources/audio/hp_audio/male/hd650.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+
+        <hr>
+
+        <p>
+          After listening to the three pairs above, answer the written questions
+          below. Then complete the demographic questions and submit the experiment.
+        </p>
+
+      showResults: false
+      writeResults: true
+
+      questionnaire:
+
+        - type: text
+          label: "Anonymous participant ID. This is generated automatically; please do not edit it."
+          name: participant_id      
+        # =========================
+        # FREE RESPONSE QUESTIONS
+        # =========================
+
+        - type: text
+          label: "Pair 1: How would you describe the difference between A and B?"
+          name: free_response_noheadphones_vs_akg60
+
+        - type: text
+          label: "Pair 2: How would you describe the difference between A and B?"
+          name: free_response_noheadphones_vs_diy45
+
+        - type: text
+          label: "Pair 3: How would you describe the difference between A and B?"
+          name: free_response_noheadphones_vs_hd650
+
+
+        # =========================
+        # DEMOGRAPHIC QUESTIONS
+        # =========================
+
+        - type: likert
+          label: "Age range"
+          name: age_range
+          response:
+            - value: "18_24"
+              label: "18–24"
+            - value: "25_34"
+              label: "25–34"
+            - value: "35_44"
+              label: "35–44"
+            - value: "45_54"
+              label: "45–54"
+            - value: "55_plus"
+              label: "55+"
+            - value: "prefer_not_to_say"
+              label: "Prefer not to say"
+
+        - type: likert
+          label: "Gender"
+          name: gender
+          response:
+            - value: "female"
+              label: "Female"
+            - value: "male"
+              label: "Male"
+            - value: "nonbinary"
+              label: "Non-binary"
+            - value: "prefer_to_self_describe"
+              label: "Prefer to self-describe"
+            - value: "prefer_not_to_say"
+              label: "Prefer not to say"
+
+        - type: text
+          label: "If you selected 'Prefer to self-describe' for gender, you may write it here. Otherwise, type N/A."
+          name: gender_self_describe
+
+        - type: likert
+          label: "Do you have any known hearing loss?"
+          name: hearing_loss
+          response:
+            - value: "no"
+              label: "No"
+            - value: "yes"
+              label: "Yes"
+            - value: "unsure"
+              label: "Unsure"
+            - value: "prefer_not_to_say"
+              label: "Prefer not to say"
+
+        - type: text
+          label: "Please write down what headphones you are using (i.e. Sennheiser HD650s)."
+          name: listening_device
+
+        - type: likert
+          label: "How many hours per week do you spend actively listening using headphones?"
+          name: listening_experience
+          response:
+            - value: "0"
+              label: "None"
+            - value: "1-2"
+              label: "1-2 hours"
+            - value: "3-5"
+              label: "3-5 hours"
+            - value: "6+"
+              label: "6+ hours"
+
+        - type: likert
+          label: "How many hours per week do you spend virtually chatting using headphones (online gaming, teleconferencing, etc.)?"
+          name: listenchat_experience
+          response:
+            - value: "0"
+              label: "None"
+            - value: "1-2"
+              label: "1-2 hours"
+            - value: "3-5"
+              label: "3-5 hours"
+            - value: "6+"
+              label: "6+ hours"              
+
+        - type: likert
+          label: "Are you completing this test in a quiet environment?"
+          name: quiet_environment
+          response:
+            - value: "yes"
+              label: "Yes"
+            - value: "mostly"
+              label: "Mostly"
+            - value: "no"
+              label: "No"
