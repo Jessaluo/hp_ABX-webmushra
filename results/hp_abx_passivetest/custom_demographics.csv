@@ -1,0 +1,7 @@
+session_test_id,participant_id,session_uuid,trial_id,question_name,label,answer,response_time
+hp_ABX_passivetest,p_motutpj8_ll9pn7hm,fc4d48cc-5e93-4399-8a0a-e964a524039d,demographics,age_range,"Age range",25_34,18936
+hp_ABX_passivetest,p_motutpj8_ll9pn7hm,fc4d48cc-5e93-4399-8a0a-e964a524039d,demographics,gender,Gender,female,18936
+hp_ABX_passivetest,p_motutpj8_ll9pn7hm,fc4d48cc-5e93-4399-8a0a-e964a524039d,demographics,gender_self_describe,"If you selected 'Prefer to self-describe' for gender, you may write it here. Otherwise, leave blank.",,18936
+hp_ABX_passivetest,p_motutpj8_ll9pn7hm,fc4d48cc-5e93-4399-8a0a-e964a524039d,demographics,listening_device,"Please write down what headphones you are using (e.g. Sennheiser HD650s).","bose qciis",18936
+hp_ABX_passivetest,p_motutpj8_ll9pn7hm,fc4d48cc-5e93-4399-8a0a-e964a524039d,demographics,listening_experience,"How many hours per week do you spend actively listening using headphones?",3-5,18936
+hp_ABX_passivetest,p_motutpj8_ll9pn7hm,fc4d48cc-5e93-4399-8a0a-e964a524039d,demographics,listenchat_experience,"How many hours per week do you spend using headphones with a microphone (online gaming, Zoom teleconferencing, etc.)?",1-2,18936

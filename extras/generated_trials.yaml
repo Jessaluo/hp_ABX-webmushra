@@ -1,0 +1,596 @@
+    -
+      - random
+
+      - type: paired_comparison
+        id: test_withinAKG_noHP_vs_akg0_male_r01
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/male/noHP.wav
+        stimuli:
+          akg0_m_r01: configs/resources/audio/hp_audio/male/akg0.wav
+
+      - type: paired_comparison
+        id: test_withinAKG_noHP_vs_akg12_male_r01
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/male/noHP.wav
+        stimuli:
+          akg12_m_r01: configs/resources/audio/hp_audio/male/akg12.wav
+
+      - type: paired_comparison
+        id: test_withinAKG_noHP_vs_akg30_male_r01
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/male/noHP.wav
+        stimuli:
+          akg30_m_r01: configs/resources/audio/hp_audio/male/akg30.wav
+
+      - type: paired_comparison
+        id: test_withinAKG_noHP_vs_akg45_male_r01
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/male/noHP.wav
+        stimuli:
+          akg45_m_r01: configs/resources/audio/hp_audio/male/akg45.wav
+
+      - type: paired_comparison
+        id: test_withinAKG_noHP_vs_akg60_male_r01
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/male/noHP.wav
+        stimuli:
+          akg60_m_r01: configs/resources/audio/hp_audio/male/akg60.wav
+
+      - type: paired_comparison
+        id: test_withinDIY_noHP_vs_diy12_male_r01
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/male/noHP.wav
+        stimuli:
+          diy12_m_r01: configs/resources/audio/hp_audio/male/diy12.wav
+
+      - type: paired_comparison
+        id: test_withinDIY_noHP_vs_diy30_male_r01
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/male/noHP.wav
+        stimuli:
+          diy30_m_r01: configs/resources/audio/hp_audio/male/diy30.wav
+
+      - type: paired_comparison
+        id: test_withinDIY_noHP_vs_diy45_male_r01
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/male/noHP.wav
+        stimuli:
+          diy45_m_r01: configs/resources/audio/hp_audio/male/diy45.wav
+
+      - type: paired_comparison
+        id: test_sennheiserDummy_noHP_vs_hd650_male_r01
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/male/noHP.wav
+        stimuli:
+          hd650_m_r01: configs/resources/audio/hp_audio/male/hd650.wav
+
+      - type: paired_comparison
+        id: test_withinAKG_noHP_vs_akg0_female_r01
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/female/noHP.wav
+        stimuli:
+          akg0_f_r01: configs/resources/audio/hp_audio/female/akg0.wav
+
+      - type: paired_comparison
+        id: test_withinAKG_noHP_vs_akg12_female_r01
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/female/noHP.wav
+        stimuli:
+          akg12_f_r01: configs/resources/audio/hp_audio/female/akg12.wav
+
+      - type: paired_comparison
+        id: test_withinAKG_noHP_vs_akg30_female_r01
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/female/noHP.wav
+        stimuli:
+          akg30_f_r01: configs/resources/audio/hp_audio/female/akg30.wav
+
+      - type: paired_comparison
+        id: test_withinAKG_noHP_vs_akg45_female_r01
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/female/noHP.wav
+        stimuli:
+          akg45_f_r01: configs/resources/audio/hp_audio/female/akg45.wav
+
+      - type: paired_comparison
+        id: test_withinAKG_noHP_vs_akg60_female_r01
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/female/noHP.wav
+        stimuli:
+          akg60_f_r01: configs/resources/audio/hp_audio/female/akg60.wav
+
+      - type: paired_comparison
+        id: test_withinDIY_noHP_vs_diy12_female_r01
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/female/noHP.wav
+        stimuli:
+          diy12_f_r01: configs/resources/audio/hp_audio/female/diy12.wav
+
+      - type: paired_comparison
+        id: test_withinDIY_noHP_vs_diy30_female_r01
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/female/noHP.wav
+        stimuli:
+          diy30_f_r01: configs/resources/audio/hp_audio/female/diy30.wav
+
+      - type: paired_comparison
+        id: test_withinDIY_noHP_vs_diy45_female_r01
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/female/noHP.wav
+        stimuli:
+          diy45_f_r01: configs/resources/audio/hp_audio/female/diy45.wav
+
+      - type: paired_comparison
+        id: test_sennheiserDummy_noHP_vs_hd650_female_r01
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/female/noHP.wav
+        stimuli:
+          hd650_f_r01: configs/resources/audio/hp_audio/female/hd650.wav
+
+      - type: paired_comparison
+        id: test_withinAKG_noHP_vs_akg0_male_r02
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/male/noHP.wav
+        stimuli:
+          akg0_m_r02: configs/resources/audio/hp_audio/male/akg0.wav
+
+      - type: paired_comparison
+        id: test_withinAKG_noHP_vs_akg12_male_r02
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/male/noHP.wav
+        stimuli:
+          akg12_m_r02: configs/resources/audio/hp_audio/male/akg12.wav
+
+      - type: paired_comparison
+        id: test_withinAKG_noHP_vs_akg30_male_r02
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/male/noHP.wav
+        stimuli:
+          akg30_m_r02: configs/resources/audio/hp_audio/male/akg30.wav
+
+      - type: paired_comparison
+        id: test_withinAKG_noHP_vs_akg45_male_r02
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/male/noHP.wav
+        stimuli:
+          akg45_m_r02: configs/resources/audio/hp_audio/male/akg45.wav
+
+      - type: paired_comparison
+        id: test_withinAKG_noHP_vs_akg60_male_r02
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/male/noHP.wav
+        stimuli:
+          akg60_m_r02: configs/resources/audio/hp_audio/male/akg60.wav
+
+      - type: paired_comparison
+        id: test_withinDIY_noHP_vs_diy12_male_r02
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/male/noHP.wav
+        stimuli:
+          diy12_m_r02: configs/resources/audio/hp_audio/male/diy12.wav
+
+      - type: paired_comparison
+        id: test_withinDIY_noHP_vs_diy30_male_r02
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/male/noHP.wav
+        stimuli:
+          diy30_m_r02: configs/resources/audio/hp_audio/male/diy30.wav
+
+      - type: paired_comparison
+        id: test_withinDIY_noHP_vs_diy45_male_r02
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/male/noHP.wav
+        stimuli:
+          diy45_m_r02: configs/resources/audio/hp_audio/male/diy45.wav
+
+      - type: paired_comparison
+        id: test_sennheiserDummy_noHP_vs_hd650_male_r02
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/male/noHP.wav
+        stimuli:
+          hd650_m_r02: configs/resources/audio/hp_audio/male/hd650.wav
+
+      - type: paired_comparison
+        id: test_withinAKG_noHP_vs_akg0_female_r02
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/female/noHP.wav
+        stimuli:
+          akg0_f_r02: configs/resources/audio/hp_audio/female/akg0.wav
+
+      - type: paired_comparison
+        id: test_withinAKG_noHP_vs_akg12_female_r02
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/female/noHP.wav
+        stimuli:
+          akg12_f_r02: configs/resources/audio/hp_audio/female/akg12.wav
+
+      - type: paired_comparison
+        id: test_withinAKG_noHP_vs_akg30_female_r02
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/female/noHP.wav
+        stimuli:
+          akg30_f_r02: configs/resources/audio/hp_audio/female/akg30.wav
+
+      - type: paired_comparison
+        id: test_withinAKG_noHP_vs_akg45_female_r02
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/female/noHP.wav
+        stimuli:
+          akg45_f_r02: configs/resources/audio/hp_audio/female/akg45.wav
+
+      - type: paired_comparison
+        id: test_withinAKG_noHP_vs_akg60_female_r02
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/female/noHP.wav
+        stimuli:
+          akg60_f_r02: configs/resources/audio/hp_audio/female/akg60.wav
+
+      - type: paired_comparison
+        id: test_withinDIY_noHP_vs_diy12_female_r02
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/female/noHP.wav
+        stimuli:
+          diy12_f_r02: configs/resources/audio/hp_audio/female/diy12.wav
+
+      - type: paired_comparison
+        id: test_withinDIY_noHP_vs_diy30_female_r02
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/female/noHP.wav
+        stimuli:
+          diy30_f_r02: configs/resources/audio/hp_audio/female/diy30.wav
+
+      - type: paired_comparison
+        id: test_withinDIY_noHP_vs_diy45_female_r02
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/female/noHP.wav
+        stimuli:
+          diy45_f_r02: configs/resources/audio/hp_audio/female/diy45.wav
+
+      - type: paired_comparison
+        id: test_sennheiserDummy_noHP_vs_hd650_female_r02
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/female/noHP.wav
+        stimuli:
+          hd650_f_r02: configs/resources/audio/hp_audio/female/hd650.wav
+
+      - type: paired_comparison
+        id: test_withinAKG_noHP_vs_akg0_male_r03
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/male/noHP.wav
+        stimuli:
+          akg0_m_r03: configs/resources/audio/hp_audio/male/akg0.wav
+
+      - type: paired_comparison
+        id: test_withinAKG_noHP_vs_akg12_male_r03
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/male/noHP.wav
+        stimuli:
+          akg12_m_r03: configs/resources/audio/hp_audio/male/akg12.wav
+
+      - type: paired_comparison
+        id: test_withinAKG_noHP_vs_akg30_male_r03
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/male/noHP.wav
+        stimuli:
+          akg30_m_r03: configs/resources/audio/hp_audio/male/akg30.wav
+
+      - type: paired_comparison
+        id: test_withinAKG_noHP_vs_akg45_male_r03
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/male/noHP.wav
+        stimuli:
+          akg45_m_r03: configs/resources/audio/hp_audio/male/akg45.wav
+
+      - type: paired_comparison
+        id: test_withinAKG_noHP_vs_akg60_male_r03
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/male/noHP.wav
+        stimuli:
+          akg60_m_r03: configs/resources/audio/hp_audio/male/akg60.wav
+
+      - type: paired_comparison
+        id: test_withinDIY_noHP_vs_diy12_male_r03
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/male/noHP.wav
+        stimuli:
+          diy12_m_r03: configs/resources/audio/hp_audio/male/diy12.wav
+
+      - type: paired_comparison
+        id: test_withinDIY_noHP_vs_diy30_male_r03
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/male/noHP.wav
+        stimuli:
+          diy30_m_r03: configs/resources/audio/hp_audio/male/diy30.wav
+
+      - type: paired_comparison
+        id: test_withinDIY_noHP_vs_diy45_male_r03
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/male/noHP.wav
+        stimuli:
+          diy45_m_r03: configs/resources/audio/hp_audio/male/diy45.wav
+
+      - type: paired_comparison
+        id: test_sennheiserDummy_noHP_vs_hd650_male_r03
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/male/noHP.wav
+        stimuli:
+          hd650_m_r03: configs/resources/audio/hp_audio/male/hd650.wav
+
+      - type: paired_comparison
+        id: test_withinAKG_noHP_vs_akg0_female_r03
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/female/noHP.wav
+        stimuli:
+          akg0_f_r03: configs/resources/audio/hp_audio/female/akg0.wav
+
+      - type: paired_comparison
+        id: test_withinAKG_noHP_vs_akg12_female_r03
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/female/noHP.wav
+        stimuli:
+          akg12_f_r03: configs/resources/audio/hp_audio/female/akg12.wav
+
+      - type: paired_comparison
+        id: test_withinAKG_noHP_vs_akg30_female_r03
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/female/noHP.wav
+        stimuli:
+          akg30_f_r03: configs/resources/audio/hp_audio/female/akg30.wav
+
+      - type: paired_comparison
+        id: test_withinAKG_noHP_vs_akg45_female_r03
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/female/noHP.wav
+        stimuli:
+          akg45_f_r03: configs/resources/audio/hp_audio/female/akg45.wav
+
+      - type: paired_comparison
+        id: test_withinAKG_noHP_vs_akg60_female_r03
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/female/noHP.wav
+        stimuli:
+          akg60_f_r03: configs/resources/audio/hp_audio/female/akg60.wav
+
+      - type: paired_comparison
+        id: test_withinDIY_noHP_vs_diy12_female_r03
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/female/noHP.wav
+        stimuli:
+          diy12_f_r03: configs/resources/audio/hp_audio/female/diy12.wav
+
+      - type: paired_comparison
+        id: test_withinDIY_noHP_vs_diy30_female_r03
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/female/noHP.wav
+        stimuli:
+          diy30_f_r03: configs/resources/audio/hp_audio/female/diy30.wav
+
+      - type: paired_comparison
+        id: test_withinDIY_noHP_vs_diy45_female_r03
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/female/noHP.wav
+        stimuli:
+          diy45_f_r03: configs/resources/audio/hp_audio/female/diy45.wav
+
+      - type: paired_comparison
+        id: test_sennheiserDummy_noHP_vs_hd650_female_r03
+        name: Listening Trial
+        content: |
+          <p>Listen to X, A, and B. Decide whether X is identical to A or B.</p>
+        showWaveform: true
+        enableLooping: true
+        reference: configs/resources/audio/hp_audio/female/noHP.wav
+        stimuli:
+          hd650_f_r03: configs/resources/audio/hp_audio/female/hd650.wav

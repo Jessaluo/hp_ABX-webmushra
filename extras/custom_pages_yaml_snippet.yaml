@@ -1,0 +1,137 @@
+    - type: free_response_audio_pairs
+      id: free_response_audio_pairs
+      name: Final Listening Descriptions
+      content: |
+        <h3>Final Listening Description Section</h3>
+        <p>
+          In this section, listen to each A/B pair and describe the audible
+          difference between A and B in your own words.
+        </p>
+        <p>
+          You may mention timbre, brightness, muffling, distance, spaciousness,
+          bass, clarity, localization, or any other perceptual difference.
+        </p>
+      pairs:
+        - id: noHP_vs_akg45
+          name: free_response_noHP_vs_akg45
+          title: "Pair 1: No headphones vs AKG 45°"
+          aLabel: "No headphones"
+          aFile: configs/resources/audio/hp_audio/male/noHP.wav
+          bLabel: "AKG 45°"
+          bFile: configs/resources/audio/hp_audio/male/akg45.wav
+          question: "How would you describe the difference between A, no headphones, and B, AKG 45°?"
+
+        - id: noHP_vs_diy45
+          name: free_response_noHP_vs_diy45
+          title: "Pair 2: No headphones vs DIY 45°"
+          aLabel: "No headphones"
+          aFile: configs/resources/audio/hp_audio/male/noHP.wav
+          bLabel: "DIY 45°"
+          bFile: configs/resources/audio/hp_audio/male/diy45.wav
+          question: "How would you describe the difference between A, no headphones, and B, DIY 45°?"
+
+        - id: noHP_vs_akg12
+          name: free_response_noHP_vs_akg12
+          title: "Pair 3: No headphones vs AKG 12°"
+          aLabel: "No headphones"
+          aFile: configs/resources/audio/hp_audio/male/noHP.wav
+          bLabel: "AKG 45°"
+          bFile: configs/resources/audio/hp_audio/male/akg12.wav
+          question: "How would you describe the difference between A, no headphones, and B, AKG 12°?"
+
+        - id: noHP_vs_diy12
+          name: free_response_noHP_vs_diy12
+          title: "Pair 4: No headphones vs DIY 12°"
+          aLabel: "No headphones"
+          aFile: configs/resources/audio/hp_audio/male/noHP.wav
+          bLabel: "DIY 45°"
+          bFile: configs/resources/audio/hp_audio/male/diy12.wav
+          question: "How would you describe the difference between A, no headphones, and B, DIY 12°?"
+
+    - type: demographics
+      id: demographics
+      name: Participant Information
+      content: |
+        <h3>Participant Information</h3>
+        <p>
+          Please answer the following anonymous demographic questions.
+          Do not enter your name, email address, or any identifying information.
+        </p>
+      questions:
+        - type: likert
+          label: "Age range"
+          name: age_range
+          response:
+            - value: "18_24"
+              label: "18–24"
+            - value: "25_34"
+              label: "25–34"
+            - value: "35_44"
+              label: "35–44"
+            - value: "45_54"
+              label: "45–54"
+            - value: "55_plus"
+              label: "55+"
+            - value: "prefer_not_to_say"
+              label: "Prefer not to say"
+
+        - type: likert
+          label: "Gender"
+          name: gender
+          response:
+            - value: "female"
+              label: "Female"
+            - value: "male"
+              label: "Male"
+            - value: "nonbinary"
+              label: "Non-binary"
+            - value: "prefer_to_self_describe"
+              label: "Prefer to self-describe"
+            - value: "prefer_not_to_say"
+              label: "Prefer not to say"
+
+        - type: text
+          label: "If you selected 'Prefer to self-describe' for gender, you may write it here. Otherwise, leave blank."
+          name: gender_self_describe
+          required: false
+
+        - type: text
+          label: "Please write down what headphones you are using (e.g. Sennheiser HD650s)."
+          name: listening_device
+
+        - type: likert
+          label: "How many hours per week do you spend actively listening using headphones?"
+          name: listening_experience
+          response:
+            - value: "0"
+              label: "None"
+            - value: "1-2"
+              label: "1-2 hours"
+            - value: "3-5"
+              label: "3-5 hours"
+            - value: "6+"
+              label: "6+ hours"
+
+        - type: likert
+          label: "How many hours per week do you spend using headphones with a microphone (online gaming, Zoom teleconferencing, etc.)?"
+          name: listenchat_experience
+          response:
+            - value: "0"
+              label: "None"
+            - value: "1-2"
+              label: "1-2 hours"
+            - value: "3-5"
+              label: "3-5 hours"
+            - value: "6+"
+              label: "6+ hours"      
+
+    - type: finish
+      name: Finished
+      content: |
+        <h3>Submit results</h3>
+        <p>
+          Thank you. Click the button below to submit your listening-test results,
+          written responses, and anonymous demographic answers.
+        </p>
+      showResults: false
+      writeResults: true

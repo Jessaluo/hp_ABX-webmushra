@@ -29,6 +29,29 @@ if(version_compare(PHP_VERSION, '8.0.0', '<') and get_magic_quotes_gpc()){
 
 $session = json_decode($sessionParam);
 
+if (!isset($session->participant)) {
+    $session->participant = new stdClass();
+}
+if (!isset($session->participant->name) || !is_array($session->participant->name)) {
+    $session->participant->name = array();
+}
+if (!isset($session->participant->response) || !is_array($session->participant->response)) {
+    $session->participant->response = array();
+}
+if (!isset($session->trials) || !is_array($session->trials)) {
+    $session->trials = array();
+}
+if (!isset($session->uuid)) {
+    $session->uuid = uniqid('session_', true);
+}
+if (isset($session->participantId) && $session->participantId !== "") {
+    $participantId = $session->participantId;
+} elseif (isset($session->participant_id) && $session->participant_id !== "") {
+    $participantId = $session->participant_id;
+} else {
+    $participantId = $session->uuid;
+}
+
 
 $filepathPrefix = "../results/".sanitize($string = $session->testId, $is_filename =FALSE)."/";
 $filepathPostfix = ".csv";
@@ -94,7 +117,7 @@ $write_pc = false;
 $pcCsvData = array();
 // array_push($pcCsvData, array("session_test_id", "participant_email", "participant_age", "participant_gender", "trial_id", "choice_reference", "choice_non_reference", "choice_answer", "choice_time", "choice_comment"));
 
-$input = array("session_test_id");
+$input = array("session_test_id", "participant_id");
 for($i =0; $i < $length; $i++){
 	array_push($input, $session->participant->name[$i]);
 }
@@ -109,7 +132,7 @@ foreach ($session->trials as $trial) {
 	  	$write_pc = true;
 		  
 		 
-		$results = array($session->testId);
+		$results = array($session->testId, $participantId);
 		for($i =0; $i < $length; $i++){
 			array_push($results, $session->participant->response[$i]);
 		}  
@@ -507,6 +530,92 @@ if ($write_spatial_lev) {
     fclose($fp);
 
 
+}
+
+
+
+// custom free-response audio-pair pages
+$write_custom_free_response = false;
+$customFreeResponseData = array();
+$input = array("session_test_id", "participant_id", "session_uuid", "trial_id", "pair_id", "question_name", "title", "a_label", "a_file", "b_label", "b_file", "question", "answer", "response_time");
+array_push($customFreeResponseData, $input);
+
+foreach ($session->trials as $trial) {
+    if ($trial->type == "custom_free_response_audio_pairs") {
+        foreach ($trial->responses as $response) {
+            $write_custom_free_response = true;
+            $results = array(
+                $session->testId,
+                $participantId,
+                $session->uuid,
+                isset($trial->id) ? $trial->id : "",
+                isset($response->pair_id) ? $response->pair_id : "",
+                isset($response->question_name) ? $response->question_name : "",
+                isset($response->title) ? $response->title : "",
+                isset($response->a_label) ? $response->a_label : "",
+                isset($response->a_file) ? $response->a_file : "",
+                isset($response->b_label) ? $response->b_label : "",
+                isset($response->b_file) ? $response->b_file : "",
+                isset($response->question) ? $response->question : "",
+                isset($response->answer) ? $response->answer : "",
+                isset($response->time) ? $response->time : ""
+            );
+            array_push($customFreeResponseData, $results);
+        }
+    }
+}
+
+if ($write_custom_free_response) {
+    $filename = $filepathPrefix."custom_free_response".$filepathPostfix;
+    $isFile = is_file($filename);
+    $fp = fopen($filename, 'a');
+    foreach ($customFreeResponseData as $row) {
+        if ($isFile) {
+            $isFile = false;
+        } else {
+            fputcsv($fp, $row);
+        }
+    }
+    fclose($fp);
+}
+
+// custom demographics page
+$write_custom_demographics = false;
+$customDemographicsData = array();
+$input = array("session_test_id", "participant_id", "session_uuid", "trial_id", "question_name", "label", "answer", "response_time");
+array_push($customDemographicsData, $input);
+
+foreach ($session->trials as $trial) {
+    if ($trial->type == "custom_demographics") {
+        foreach ($trial->responses as $response) {
+            $write_custom_demographics = true;
+            $results = array(
+                $session->testId,
+                $participantId,
+                $session->uuid,
+                isset($trial->id) ? $trial->id : "",
+                isset($response->question_name) ? $response->question_name : "",
+                isset($response->label) ? $response->label : "",
+                isset($response->answer) ? $response->answer : "",
+                isset($response->time) ? $response->time : ""
+            );
+            array_push($customDemographicsData, $results);
+        }
+    }
+}
+
+if ($write_custom_demographics) {
+    $filename = $filepathPrefix."custom_demographics".$filepathPostfix;
+    $isFile = is_file($filename);
+    $fp = fopen($filename, 'a');
+    foreach ($customDemographicsData as $row) {
+        if ($isFile) {
+            $isFile = false;
+        } else {
+            fputcsv($fp, $row);
+        }
+    }
+    fclose($fp);
 }
 
 
