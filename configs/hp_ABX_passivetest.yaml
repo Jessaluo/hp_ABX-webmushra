@@ -780,11 +780,11 @@ pages:
           required: false
 
         - type: text
-          label: "Please write down what headphones you are using (e.g. Sennheiser HD650s)."
+          label: "Please write down the make and model of headphones you are using (e.g. Sennheiser HD650s)."
           name: listening_device
 
         - type: likert
-          label: "How many hours per week do you spend actively listening using headphones?"
+          label: "How many hours per week do you spend critical listening using headphones? (Critical listening means that you concentrate on the recordings without doing any other activities.)"
           name: listening_experience
           response:
             - value: "0"

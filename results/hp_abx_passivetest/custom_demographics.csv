@@ -47,3 +47,9 @@ hp_ABX_passivetest,hp_mpcf0pc0_krr2rz13,257d27ed-4f42-4479-9da1-fd320fe23cd4,dem
 hp_ABX_passivetest,hp_mpcf0pc0_krr2rz13,257d27ed-4f42-4479-9da1-fd320fe23cd4,demographics,listening_device,"Please write down what headphones you are using (e.g. Sennheiser HD650s).","sennheiser hd650s",13885
 hp_ABX_passivetest,hp_mpcf0pc0_krr2rz13,257d27ed-4f42-4479-9da1-fd320fe23cd4,demographics,listening_experience,"How many hours per week do you spend actively listening using headphones?",3-5,13885
 hp_ABX_passivetest,hp_mpcf0pc0_krr2rz13,257d27ed-4f42-4479-9da1-fd320fe23cd4,demographics,listenchat_experience,"How many hours per week do you spend using headphones with a microphone (online gaming, Zoom teleconferencing, etc.)?",1-2,13885
+hp_ABX_passivetest,hp_mpqnmy0g_rxp262gc,659fd04c-b41a-4450-9b61-6dd62ca6909a,demographics,age_range,"Age range",25_34,46083
+hp_ABX_passivetest,hp_mpqnmy0g_rxp262gc,659fd04c-b41a-4450-9b61-6dd62ca6909a,demographics,gender,Gender,male,46083
+hp_ABX_passivetest,hp_mpqnmy0g_rxp262gc,659fd04c-b41a-4450-9b61-6dd62ca6909a,demographics,gender_self_describe,"If you selected 'Prefer to self-describe' for gender, you may write it here. Otherwise, leave blank.",,46083
+hp_ABX_passivetest,hp_mpqnmy0g_rxp262gc,659fd04c-b41a-4450-9b61-6dd62ca6909a,demographics,listening_device,"Please write down what headphones you are using (e.g. Sennheiser HD650s).",HD650s,46083
+hp_ABX_passivetest,hp_mpqnmy0g_rxp262gc,659fd04c-b41a-4450-9b61-6dd62ca6909a,demographics,listening_experience,"How many hours per week do you spend actively listening using headphones?","6 ",46083
+hp_ABX_passivetest,hp_mpqnmy0g_rxp262gc,659fd04c-b41a-4450-9b61-6dd62ca6909a,demographics,listenchat_experience,"How many hours per week do you spend using headphones with a microphone (online gaming, Zoom teleconferencing, etc.)?",3-5,46083
